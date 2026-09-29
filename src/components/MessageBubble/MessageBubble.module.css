@@ -1,0 +1,76 @@
+.row {
+  display: flex;
+  margin-top: 2px;
+}
+
+.groupStart {
+  margin-top: 12px;
+}
+
+.rowOut {
+  justify-content: flex-end;
+}
+
+.rowIn {
+  justify-content: flex-start;
+}
+
+.bubble {
+  position: relative;
+  max-width: 65%;
+  padding: 6px 7px 8px 9px;
+  border-radius: var(--radius-bubble);
+  box-shadow: 0 1px 0.5px rgba(11, 20, 26, 0.13);
+  font-size: 14.2px;
+  line-height: 19px;
+  color: var(--wa-text);
+}
+
+.out {
+  background: var(--wa-bubble-out);
+}
+
+.in {
+  background: var(--wa-bubble-in);
+}
+
+.tail.out {
+  border-top-right-radius: 0;
+}
+
+.tail.in {
+  border-top-left-radius: 0;
+}
+
+.tail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 13px;
+}
+
+.tail.out::before {
+  right: -8px;
+  background: var(--wa-bubble-out);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.tail.in::before {
+  left: -8px;
+  background: var(--wa-bubble-in);
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.time {
+  float: right;
+  margin: 8px 0 -5px 10px;
+  font-size: 11px;
+  line-height: 15px;
+  color: var(--wa-text-secondary);
+}

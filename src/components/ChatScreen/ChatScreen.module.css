@@ -1,7 +1,16 @@
 .root {
+  position: relative;
   display: flex;
   height: 100%;
   max-width: 1600px;
   margin: 0 auto;
   background: var(--wa-panel-bg);
+  box-shadow: 0 6px 18px rgba(11, 20, 26, 0.05);
+}
+
+@media (min-width: 1440px) {
+  .root {
+    height: calc(100% - 38px);
+    top: 19px;
+  }
 }

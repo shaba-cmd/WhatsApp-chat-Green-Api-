@@ -1,21 +1,24 @@
 :root {
-  --wa-app-bg: #d1d7db;          
-  --wa-panel-bg: #ffffff;        
-  --wa-header-bg: #f0f2f5;      
-  --wa-chat-bg: #efeae2;        
-  --wa-bubble-out: #d9fdd3;      
-  --wa-bubble-in: #ffffff;       
-  --wa-accent: #00a884;         
+  --wa-app-bg: #d1d7db;
+  --wa-app-stripe: #00a884;
+  --wa-panel-bg: #ffffff;
+  --wa-header-bg: #f0f2f5;
+  --wa-chat-bg: #efeae2;
+  --wa-bubble-out: #d9fdd3;
+  --wa-bubble-in: #ffffff;
+  --wa-accent: #00a884;
   --wa-text: #111b21;
   --wa-text-secondary: #667781;
+  --wa-icon: #54656f;
   --wa-border: #e9edef;
   --wa-hover: #f5f6f6;
   --wa-active: #f0f2f5;
+  --wa-error: #b3261e;
 
   --sidebar-width: 30%;
   --header-height: 60px;
   --radius-bubble: 7.5px;
 
-  font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, 'Lucida Grande', Arial, sans-serif;
   color: var(--wa-text);
 }

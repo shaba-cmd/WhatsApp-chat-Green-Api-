@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { isValidPhone, phoneToChatId } from '../../utils/phone';
+import styles from './NewChatForm.module.css';
 
 interface Props {
   onCreate: (chatId: string) => void;
@@ -22,15 +23,28 @@ export function NewChatForm({ onCreate }: Props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        value={phone}
-        onChange={(e) => setPhone(e.target.value)}
-        placeholder="Номер телефона"
-        inputMode="tel"
-      />
-      <button type="submit" disabled={!phone.trim()}>Новый чат</button>
-      {error && <p role="alert">{error}</p>}
+    <form className={styles.root} onSubmit={handleSubmit}>
+      <div className={styles.row}>
+        <input
+          className={styles.input}
+          value={phone}
+          onChange={(e) => {
+            setPhone(e.target.value);
+            setError(null);
+          }}
+          placeholder="Номер телефона нового чата"
+          inputMode="tel"
+          aria-label="Номер телефона"
+        />
+        <button type="submit" className={styles.button} disabled={!phone.trim()}>
+          Создать
+        </button>
+      </div>
+      {error && (
+        <p role="alert" className={styles.error}>
+          {error}
+        </p>
+      )}
     </form>
   );
 }

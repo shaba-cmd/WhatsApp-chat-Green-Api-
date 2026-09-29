@@ -1,0 +1,46 @@
+.root {
+  min-height: 62px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  background: var(--wa-header-bg);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--wa-panel-bg);
+  color: var(--wa-text);
+  font-size: 15px;
+  outline: none;
+}
+
+.send {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--wa-icon);
+  cursor: pointer;
+}
+
+.send:not(:disabled) {
+  color: var(--wa-accent);
+}
+
+.send:disabled {
+  cursor: default;
+}
+
+.send:not(:disabled):hover {
+  background: rgba(0, 0, 0, 0.05);
+}

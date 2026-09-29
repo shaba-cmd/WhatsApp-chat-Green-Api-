@@ -1,0 +1,45 @@
+.root {
+  padding: 0 12px 8px;
+  flex-shrink: 0;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 36px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--wa-header-bg);
+  color: var(--wa-text);
+  outline: none;
+}
+
+.input:focus {
+  box-shadow: inset 0 0 0 2px var(--wa-accent);
+}
+
+.button {
+  padding: 0 14px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--wa-accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.error {
+  margin: 6px 4px 0;
+  font-size: 13px;
+  color: var(--wa-error);
+}

@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
+import { SendIcon } from '../../icons';
+import styles from './MessageInput.module.css';
 
 interface Props {
   onSend: (text: string) => void;
@@ -17,14 +19,18 @@ export function MessageInput({ onSend }: Props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.root} onSubmit={handleSubmit}>
       <input
+        className={styles.input}
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Введите сообщение"
+        aria-label="Сообщение"
         autoFocus
       />
-      <button type="submit" disabled={!text.trim()}>Отправить</button>
+      <button type="submit" className={styles.send} disabled={!text.trim()} aria-label="Отправить">
+        <SendIcon />
+      </button>
     </form>
   );
 }

@@ -1,0 +1,10 @@
+.root {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #dfe5e7;
+  color: #fff;
+}

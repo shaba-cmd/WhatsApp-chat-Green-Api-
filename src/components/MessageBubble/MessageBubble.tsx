@@ -1,13 +1,26 @@
 import type { Message } from '../../types';
+import { formatTime } from '../../utils/time';
+import styles from './MessageBubble.module.css';
 
-const formatTime = (ts: number) =>
-  new Date(ts * 1000).toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+interface Props {
+  message: Message;
+  isFirstInGroup: boolean;
+}
 
-export function MessageBubble({ message }: { message: Message }) {
+export function MessageBubble({ message, isFirstInGroup }: Props) {
   const isOut = message.direction === 'outgoing';
+  const classes = [
+    styles.bubble,
+    isOut ? styles.out : styles.in,
+    isFirstInGroup ? styles.tail : '',
+  ].join(' ');
+
   return (
-    <div style={{ alignSelf: isOut ? 'flex-end' : 'flex-start' }}>
-      <span>{message.text}</span> <small>{formatTime(message.timestamp)}</small>
+    <div className={`${styles.row} ${isOut ? styles.rowOut : styles.rowIn} ${isFirstInGroup ? styles.groupStart : ''}`}>
+      <div className={classes}>
+        <span className={styles.text}>{message.text}</span>
+        <span className={styles.time}>{formatTime(message.timestamp)}</span>
+      </div>
     </div>
   );
 }
