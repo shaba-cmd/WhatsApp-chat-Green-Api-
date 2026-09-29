@@ -9,3 +9,27 @@
   margin: auto;
   color: var(--wa-text-secondary);
 }
+
+.header {
+  height: var(--header-height);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  background: var(--wa-header-bg);
+}
+
+.feed {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.error {
+  margin: 0;
+  padding: 8px 16px;
+  color: #b3261e;
+  background: var(--wa-header-bg);
+}
