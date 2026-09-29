@@ -1,19 +1,20 @@
 export interface Credentials {
+  apiUrl: string;
   idInstance: string;
   apiTokenInstance: string;
 }
 
 export interface Message {
-  id: string;    
-  chatId: string;   
+  id: string;
+  chatId: string;
   text: string;
-  direction: 'outgoing' | 'incoming';
-  timestamp: number;  
+  direction: "outgoing" | "incoming";
+  timestamp: number;
 }
 
 export interface Chat {
-  chatId: string;        
-  phone: string;        
+  chatId: string;
+  phone: string;
 }
 
 export interface SendMessageResponse {

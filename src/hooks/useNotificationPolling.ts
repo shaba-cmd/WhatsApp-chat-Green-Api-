@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
-import type { Credentials, NotificationBody } from "../types";
-import { deleteNotification, receiveNotification } from "../api/greenApi";
-import axios from "axios";
+import { useEffect, useRef } from 'react';
+import axios from 'axios';
+import type { Credentials, NotificationBody } from '../types';
+import { deleteNotification, receiveNotification } from '../api/greenApi';
 
 const RETRY_DELAY_MS = 3000;
 
@@ -34,10 +34,9 @@ export function useNotificationPolling(
             await deleteNotification(creds, notification.receiptId);
           }
         } catch (error) {
-          if (axios.isAxiosError(error) && error.response?.status === 408)
-            continue;
+          if (axios.isAxiosError(error) && error.response?.status === 408) continue;
 
-          console.error("Ошибка получения уведомлений:", error);
+          console.error('Ошибка получения уведомлений:', error);
           await sleep(RETRY_DELAY_MS);
         }
       }
