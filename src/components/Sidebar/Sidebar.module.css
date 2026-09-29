@@ -1,0 +1,16 @@
+.root {
+  width: var(--sidebar-width);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--wa-border);
+}
+
+.header {
+  height: var(--header-height);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: var(--wa-header-bg);
+}
