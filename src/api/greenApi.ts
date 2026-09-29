@@ -5,7 +5,7 @@ import type {
   SendMessageResponse,
 } from '../types';
 
-const API_URL = 'https://api.green-api.com';
+const API_URL = 'https://7107.api.greenapi.com';
 
 const http = axios.create({
   baseURL: API_URL,
