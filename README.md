@@ -16,7 +16,7 @@ https://whats-app-chat-green-api.vercel.app/
 
 ```bash
 git clone https://github.com/shaba-cmd/WhatsApp-chat-Green-Api.git
-cd whatsapp-chat
+cd WhatsApp-chat-Green-Api
 npm install
 npm run dev 
 ```
