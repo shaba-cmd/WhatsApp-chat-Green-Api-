@@ -1,7 +1,7 @@
 .root {
   flex-shrink: 0;
   display: inline-flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   overflow: hidden;
   border-radius: 50%;

@@ -51,13 +51,13 @@
 }
 
 .tail.out::before {
-  right: -8px;
+  right: -7.9px;
   background: var(--wa-bubble-out);
   clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
 .tail.in::before {
-  left: -8px;
+  left: -7.9px;
   background: var(--wa-bubble-in);
   clip-path: polygon(0 0, 100% 0, 100% 100%);
 }

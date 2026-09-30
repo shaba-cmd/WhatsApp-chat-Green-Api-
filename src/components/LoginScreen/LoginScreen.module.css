@@ -15,13 +15,20 @@
   gap: 16px;
   background: var(--wa-panel-bg);
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(11, 20, 26, 0.12);
+  box-shadow: 0 1px 30px rgba(11, 20, 26, 0.267);
 }
 
 .title {
   margin: 0;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
+  text-align: center;
+}
+
+.logo  {
+  color: var(--wa-accent);
+  font-size: 16px;
+  margin: 0;
 }
 
 .hint {

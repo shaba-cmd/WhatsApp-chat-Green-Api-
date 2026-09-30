@@ -59,7 +59,8 @@ export function LoginScreen({ onLogin }: Props) {
   return (
     <div className={styles.root}>
       <form className={styles.card} onSubmit={handleSubmit}>
-        <h1 className={styles.title}>Вход</h1>
+        <h1 className={styles.logo}>WhatsApp</h1>
+        <h2 className={styles.title}>Вход</h2>
         <p className={styles.hint}>
           Данные инстанса есть в{' '}
           <a href="https://console.green-api.com" target="_blank" rel="noreferrer">

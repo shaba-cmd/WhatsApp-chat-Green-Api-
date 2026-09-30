@@ -18,7 +18,7 @@ export function Sidebar({ chats, activeChatId, getLastMessage, onSelectChat, onC
   return (
     <aside className={styles.root}>
       <header className={styles.header}>
-        <h1 className={styles.title}>Чаты</h1>
+        <h1 className={styles.title}>WhatsApp</h1>
         <button type="button" className={styles.iconButton} onClick={onLogout} title="Выйти" aria-label="Выйти">
           <LogoutIcon />
         </button>
